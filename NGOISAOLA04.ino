@@ -227,11 +227,16 @@ void sangXoaynguocchieukimdongho(int solan, int thoigianchay){
 }
 
 void loop() {
-//  nhapNhaynhanhdan();
-//  sangTheochieukimdongho(5,100);
-//  tatTheochieukimdongho(5,400);
-//  tatDantutrenxuong(5,400);
-//  tatDantuduoilen(5,400);
-//  nhapNhaycanhdoixung(5,400);
+  nhapNhaynhanhdan();
+  sangTheochieukimdongho(5,100);
+  sangNguocchieukimdongho(5,100);
+  tatTheochieukimdongho(5,400);
+  tatNguocchieukimdongho(5,400);
+  sangDantutrenxuong(5,400);
+  sangDantuduoilen(5,400);
+  tatDantutrenxuong(5,400);
+  tatDantuduoilen(5,400);
+  nhapNhaycanhdoixung(5,400);
+  sangXoaynguocchieukimdongho(5, 100);
   sangXoaynguocchieukimdongho(5, 100);
 }
