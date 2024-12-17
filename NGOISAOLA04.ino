@@ -161,10 +161,26 @@ void tatDantuduoilen(int solan, int thoigianchay){
   }
 }
 
+void nhapnhay(int solan, int thoigianchay){
+  for(int vong=0;vong<solan;vong=vong+1){
+    resetBienY(0);
+    xuatTinhieu();
+    delay(thoigianchay);
+    resetBienY(1);
+    xuatTinhieu();
+    delay(thoigianchay);
+  }  
+}
+
+void nhapNhaynhanhdan(){
+  for(int i=200;i>0;i=i-65){
+    nhapnhay(205-i, i); 
+  }
+}
 void loop() {
-//  nhapnhay(5, 2000);
+  nhapNhaynhanhdan();
 //  sangTheochieukimdongho(5,100);
 //  tatTheochieukimdongho(5,400);
-  tatDantutrenxuong(5,400);
-  tatDantuduoilen(5,400);
+//  tatDantutrenxuong(5,400);
+//  tatDantuduoilen(5,400);
 }
