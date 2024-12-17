@@ -70,8 +70,22 @@ void tatTheochieukimdongho(int solan, int thoigianchay){
   }
 }
 
+void tatNguocchieukimdongho(int solan, int thoigianchay){
+  for(int vong=0;vong<solan;vong=vong+1){
+    resetBienY(0);
+    xuatTinhieu();
+    delay(thoigianchay);
+    for(int i=0;i<4;i=i+1){
+      Y[3-i]=1;
+      xuatTinhieu();
+      delay(thoigianchay);
+    }
+  }
+}
+
 void loop() {
 //  nhapnhay(5, 2000);
 //  sangTheochieukimdongho(5,100);
-  tatTheochieukimdongho(5,400);
+//  tatTheochieukimdongho(5,400);
+  tatNguocchieukimdongho(5,400);
 }
