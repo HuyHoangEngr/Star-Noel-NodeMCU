@@ -197,11 +197,27 @@ void nhapNhaycanhdoixung(int solan, int thoigianchay){
   xuatTinhieu();
   delay(thoigianchay);
 }
+
+void sangXoaytheochieukimdongho(int solan, int thoigianchay){
+  for(int vong=0;vong<solan;vong=vong+1){
+      for(int i=0;i<4;i=i+1){
+        Y[i]=0;
+        xuatTinhieu();
+        delay(thoigianchay);
+        Y[i]=1;
+        xuatTinhieu();
+      }      
+  }
+  resetBienY(1);
+  xuatTinhieu();
+}
+
 void loop() {
 //  nhapNhaynhanhdan();
 //  sangTheochieukimdongho(5,100);
 //  tatTheochieukimdongho(5,400);
 //  tatDantutrenxuong(5,400);
 //  tatDantuduoilen(5,400);
-  nhapNhaycanhdoixung(5,400);
+//  nhapNhaycanhdoixung(5,400);
+  sangXoaytheochieukimdongho(5, 100);
 }
