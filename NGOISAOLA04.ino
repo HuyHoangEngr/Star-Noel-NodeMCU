@@ -177,10 +177,31 @@ void nhapNhaynhanhdan(){
     nhapnhay(205-i, i); 
   }
 }
+
+void nhapNhaycanhdoixung(int solan, int thoigianchay){
+  Y[0]=0;
+  Y[2]=0;
+  Y[1]=1;
+  Y[3]=1;
+  xuatTinhieu();
+  delay(thoigianchay);
+  for(int vong=0;vong<solan;vong=vong+1){
+    Y[0]=!Y[0];
+    Y[2]=!Y[2];
+    Y[1]=!Y[1];
+    Y[3]=!Y[3];
+    xuatTinhieu();
+    delay(thoigianchay);
+  }
+  resetBienY(1);
+  xuatTinhieu();
+  delay(thoigianchay);
+}
 void loop() {
-  nhapNhaynhanhdan();
+//  nhapNhaynhanhdan();
 //  sangTheochieukimdongho(5,100);
 //  tatTheochieukimdongho(5,400);
 //  tatDantutrenxuong(5,400);
 //  tatDantuduoilen(5,400);
+  nhapNhaycanhdoixung(5,400);
 }
