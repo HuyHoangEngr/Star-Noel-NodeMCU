@@ -101,9 +101,27 @@ void sangDantutrenxuong(int solan, int thoigianchay){
   }
 }
 
+void sangDantuduoilen(int solan, int thoigianchay){
+  for(int vong=0;vong<solan;vong=vong+1){
+    Y[1]=0;
+    xuatTinhieu();
+    delay(thoigianchay);
+    Y[0]=0;
+    Y[2]=0;
+    xuatTinhieu();
+    delay(thoigianchay);
+    Y[3]=0;
+    xuatTinhieu();
+    delay(thoigianchay);
+    resetBienY(1);
+    xuatTinhieu();
+    delay(thoigianchay);
+  }
+}
+
 void loop() {
 //  nhapnhay(5, 2000);
 //  sangTheochieukimdongho(5,100);
 //  tatTheochieukimdongho(5,400);
-  sangDantutrenxuong(5,400);
+  sangDantuduoilen(5,400);
 }
