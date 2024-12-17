@@ -18,9 +18,9 @@ void setup() {
   digitalWrite(D, Y[3]);
 }
 
-void resetBienY(){
+void resetBienY(int bien){
   for(int i=0;i<4;i=i+1){
-    Y[i]=1;
+    Y[i]=bien;
   }
 }
 
@@ -38,7 +38,7 @@ void sangTheochieukimdongho(int solan, int thoigianchay){
         xuatTinhieu();
         delay(thoigianchay);
       }
-      resetBienY();
+      resetBienY(1);
       xuatTinhieu();
       delay(thoigianchay);
   }
@@ -51,14 +51,27 @@ void sangNguocchieukimdongho(int solan, int thoigianchay){
         xuatTinhieu();
         delay(thoigianchay);
       }
-      resetBienY();
+      resetBienY(1);
       xuatTinhieu();
       delay(thoigianchay);
+  }
+}
+
+void tatTheochieukimdongho(int solan, int thoigianchay){
+  for(int vong=0;vong<solan;vong=vong+1){
+    resetBienY(0);
+    xuatTinhieu();
+    delay(thoigianchay);
+    for(int i=0;i<4;i=i+1){
+      Y[i]=1;
+      xuatTinhieu();
+      delay(thoigianchay);
+    }
   }
 }
 
 void loop() {
 //  nhapnhay(5, 2000);
 //  sangTheochieukimdongho(5,100);
-  sangNguocchieukimdongho(5,200);
+  tatTheochieukimdongho(5,400);
 }
