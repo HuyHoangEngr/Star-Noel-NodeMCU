@@ -212,6 +212,20 @@ void sangXoaytheochieukimdongho(int solan, int thoigianchay){
   xuatTinhieu();
 }
 
+void sangXoaynguocchieukimdongho(int solan, int thoigianchay){
+  for(int vong=0;vong<solan;vong=vong+1){
+      for(int i=0;i<4;i=i+1){
+        Y[3-i]=0;
+        xuatTinhieu();
+        delay(thoigianchay);
+        Y[3-i]=1;
+        xuatTinhieu();
+      }      
+  }
+  resetBienY(1);
+  xuatTinhieu();
+}
+
 void loop() {
 //  nhapNhaynhanhdan();
 //  sangTheochieukimdongho(5,100);
@@ -219,5 +233,5 @@ void loop() {
 //  tatDantutrenxuong(5,400);
 //  tatDantuduoilen(5,400);
 //  nhapNhaycanhdoixung(5,400);
-  sangXoaytheochieukimdongho(5, 100);
+  sangXoaynguocchieukimdongho(5, 100);
 }
